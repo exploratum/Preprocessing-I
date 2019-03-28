@@ -4,6 +4,36 @@
    License: none (public domain)
 */
 
+
+////////////////////
+//Variables and mixn
+
+@border-color: @lightgrey;
+@main-font: @pacifico;
+
+@lightgrey: lightgrey;
+@pacifico: 'Pacifico', cursive;
+
+.flex-space-between(){
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-space-around{
+	display: flex;
+	justify-content: space-around;
+}
+
+.flex-center(){
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+///////////////////
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,7 +83,198 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+
+/************************************My Chenges********************************/
+html {
+	
+	height: 100%;
+	font-size: 62.5%;
 }
+
+body{
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 5px 0;
+}
+
+.top-header{
+	width: 100%;
+	.flex-center;
+	margin-top: 40px;
+
+	nav{
+		width: 100%;
+		.flex-space-around;
+
+		a{
+			text-decoration: none;
+			font-size: 2rem;
+			color: black;
+		}
+	}
+}
+
+.bottom-header{
+	width: 100%;
+	background: lightcyan;
+	margin-top: 30px;
+	padding-bottom: 30px;
+
+	.myself{
+		display: flex;
+		align-items: center;
+		width: 100%;
+		.image-container{
+			width: 50%;
+			margin-top: 30px;
+			img{
+				height:100%;
+				width: 100%;
+				object-fit: contain;
+			}
+		}
+	
+		.name{
+			width: 50%;
+			font-size: 4rem;
+			font-family: @main-font;
+			line-height: 1.5;
+			div{
+				text-align: center;
+			}
+		}
+	}
+
+	.projects{
+		text-align: center;
+		font-size: 2rem;
+		margin-top: 30px;
+		border-top: 1px solid @border-color;
+		padding-top: 20px;
+
+		button{
+			margin-top: 20px;
+			width: 20%;
+			background: greenyellow;
+
+			a {
+				text-decoration: none;
+				line-height: 1.5;
+			}
+
+		}
+	}
+	
+}
+
+header{
+	@media screen and (max-width: 600px){
+		border: 1px solid red;
+		display: flex;
+		flex-direction: column;
+		
+		.bottom-header{
+			.myself{
+				.name{
+					font-size: 2.5rem;
+				}
+			}
+		}
+	}
+
+}
+
+.main-content{
+	width: 100%;
+	margin-top: 60px;
+
+	.top-sections{
+		.flex-space-between;
+
+		section{
+			width: 45%;
+			h2{
+				font-size: 3rem;
+				font-family: 'permanet+marker', cursive;
+				margin-bottom: 15px;
+				text-align: center;
+			}
+			p{
+				font-size: 2rem;
+				text-align: justify;
+			}
+			li{
+				font-size: 2rem;
+				line-height: 1.5;
+				padding-left: 3%;
+				border: 1px solid @border-color;
+			}
+		}
+	}
+	.bottom-section{
+
+		margin-top: 30px;
+		width: 100%;
+		h2{
+			font-size: 3rem;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+table{
+	width: 100%;
+	font-size: 2rem;
+	border: 2px solid @border-color;
+	tr{
+		line-height: 1.5;
+		text-align: left;
+
+	}
+
+	tr:nth-child(even){
+		background: lightgreen;
+	}
+}
+
+.main-content{
+	@media screen and(max-width: 500px){
+		display: flex;
+		flex-direction: column;
+
+		.top-sections{
+			flex-direction: column;
+			width: 100%;
+			section{
+				width: 100%;
+				margin-bottom: 25px;
+			}
+		}
+
+		.bottom-section{
+
+			h2{
+				font-family: 'permanent+marker', cursive;
+				text-align: center;
+			}
+			table{
+				font-size: 1.5rem;
+			}
+
+		}
+	}
+}
+
+
+
+footer{
+	margin: 30px 0 30px;
+	padding: 30px 0 25px;
+	font-size: 3rem;
+	text-align: center;
+	background: grey;
+}
+
+
 

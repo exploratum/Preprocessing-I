@@ -1,11 +1,15 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 
   <title>My Resume</title>
-
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Permanent+Marker" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
 
   <!--[if lt IE 9]>
@@ -14,6 +18,95 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <header>
+    <div class="top-header">
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <div class="bottom-header">
+      <div class="myself">
+        <div class="image-container">
+          <img src="image/coder.jpg" alt="Black and White image of a laptop with coffer on the side">
+        </div>
+        <div class="name">
+          <div>Thierry Joux </div>
+          <div>WEB Developper</div>
+        </div>
+      </div>
+
+      <div class="projects">
+        <p>
+          If you are interested to know more about my projects, please click below
+        </p>
+        <button>
+          <a href="https://exploratum.github.io/portfolio-website/">My portfolio</a>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <div class="top-sections">
+      <section>
+        <h2> A little bit about me</h2>
+        <p> Located in the Bay area, my background was essentially in RF engineering. Specialized in cellular networks,
+          or mobile phone networks, I have been doing work for companies such as LCCI, Sprint or Ericsson. However, I
+          found
+          a new passion in coding for the internet, creating front-end WEB sites or even tinkering on the server side.
+          I am current enrolled in the lambda school to further my educaitin in this new exciting field! </p>
+      </section>
+
+      <section>
+        <h2> My skills</h2>
+        <ul>
+          <li>Javascript, HTML, CSS</li>
+          <li>LESS</li>
+          <li>Java, C++, Python</li>
+          <li>LAMP stack</li>
+          <li>Jquery</li>
+          <li>Bootstrap</li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="bottom-section">
+        <h2>Work History</h2>
+        <table>
+          <tr>
+              <th>Yrs</th>
+              <th>Company</th>
+              <th>Title</th>
+              <th>Tech Used</th>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Ericsson</td>
+            <td>RF Engineeer III</td>
+            <td>Actix Analyzer</td>
+          </tr>
+            <td>9</td>
+            <td>Sprint-Nextel</td>
+            <td>RF ENgineer III</td>
+            <td>CellOPT ACP, AFP</td>
+          <tr>
+            <td>4</td>
+            <td>LCCI</td>
+            <td>Senior Engineer</td>
+            <td>CellCAD</td>
+          </tr>
+        </table>
+      </div>
+  </div>
+
+  <footer>
+    <p>contact: tjoux@hotmail.com</p> <br>
+  </footer>
+
+  
 </body>
+
 </html>
