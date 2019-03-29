@@ -145,146 +145,160 @@ body {
   margin: 0 auto;
   padding: 0 5px 0;
 }
-.top-header {
+@media screen and (max-width: 600px) {
+  body header {
+    display: flex;
+    flex-direction: column;
+  }
+  body header .bottom-header .myself .name {
+    font-size: 2.5rem;
+  }
+}
+body header .top-header {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
-.top-header nav {
+body header .top-header nav {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
-.top-header nav a {
+body header .top-header nav a {
   text-decoration: none;
   font-size: 2rem;
   color: black;
 }
-.bottom-header {
+body header .bottom-header {
   width: 100%;
   background: lightcyan;
   margin-top: 30px;
   padding-bottom: 30px;
 }
-.bottom-header .myself {
+body header .bottom-header .myself {
   display: flex;
   align-items: center;
   width: 100%;
 }
-.bottom-header .myself .image-container {
+body header .bottom-header .myself .image-container {
   width: 50%;
   margin-top: 30px;
 }
-.bottom-header .myself .image-container img {
+body header .bottom-header .myself .image-container img {
   height: 100%;
   width: 100%;
   object-fit: contain;
 }
-.bottom-header .myself .name {
+body header .bottom-header .myself .name {
   width: 50%;
   font-size: 4rem;
   font-family: 'Pacifico', cursive;
   line-height: 1.5;
 }
-.bottom-header .myself .name div {
+@media (max-width: 500px) {
+  body header .bottom-header .myself .name {
+    font-size: 3rem;
+  }
+}
+body header .bottom-header .myself .name div {
   text-align: center;
 }
-.bottom-header .projects {
+body header .bottom-header .projects {
   text-align: center;
   font-size: 2rem;
   margin-top: 30px;
   border-top: 1px solid lightgrey;
   padding-top: 20px;
 }
-.bottom-header .projects button {
+body header .bottom-header .projects button {
   margin-top: 20px;
   width: 20%;
   background: greenyellow;
 }
-.bottom-header .projects button a {
+body header .bottom-header .projects button a {
   text-decoration: none;
   line-height: 1.5;
 }
-@media screen and (max-width: 600px) {
-  header {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-  }
-  header .bottom-header .myself .name {
-    font-size: 2.5rem;
-  }
-}
-.main-content {
+body .main-content {
   width: 100%;
   margin-top: 60px;
 }
-.main-content .top-sections {
+@media (max-width: 500px) {
+  body .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+body .main-content .top-sections {
   display: flex;
   justify-content: space-between;
 }
-.main-content .top-sections section {
+@media (max-width: 500px) {
+  body .main-content .top-sections {
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid red;
+  }
+}
+body .main-content .top-sections section {
   width: 45%;
 }
-.main-content .top-sections section h2 {
+@media (max-width: 500px) {
+  body .main-content .top-sections section {
+    border: 1px solid red;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+body .main-content .top-sections section h2 {
   font-size: 3rem;
   font-family: 'permanet+marker', cursive;
   margin-bottom: 15px;
   text-align: center;
 }
-.main-content .top-sections section p {
+body .main-content .top-sections section p {
   font-size: 2rem;
   text-align: justify;
 }
-.main-content .top-sections section li {
+body .main-content .top-sections section li {
   font-size: 2rem;
   line-height: 1.5;
   padding-left: 3%;
   border: 1px solid lightgrey;
 }
-.main-content .bottom-section {
+body .main-content .bottom-section {
   margin-top: 30px;
   width: 100%;
 }
-.main-content .bottom-section h2 {
+body .main-content .bottom-section h2 {
   font-size: 3rem;
   margin-bottom: 10px;
 }
-table {
+@media (max-width: 500px) {
+  body .main-content .bottom-section h2 h2 {
+    font-family: 'permanent+marker', cursive;
+    text-align: center;
+  }
+}
+body .main-content .bottom-section table {
   width: 100%;
   font-size: 2rem;
   border: 2px solid lightgrey;
 }
-table tr {
-  line-height: 1.5;
-  text-align: left;
-}
-table tr:nth-child(even) {
-  background: lightgreen;
-}
-@media screen and (max-width: 500px) {
-  .main-content {
-    display: flex;
-    flex-direction: column;
-  }
-  .main-content .top-sections {
-    flex-direction: column;
-    width: 100%;
-  }
-  .main-content .top-sections section {
-    width: 100%;
-    margin-bottom: 25px;
-  }
-  .main-content .bottom-section h2 {
-    font-family: 'permanent+marker', cursive;
-    text-align: center;
-  }
-  .main-content .bottom-section table {
+@media (max-width: 500px) {
+  body .main-content .bottom-section table table {
     font-size: 1.5rem;
   }
 }
-footer {
+body .main-content .bottom-section table tr {
+  line-height: 1.5;
+  text-align: left;
+}
+body .main-content .bottom-section table tr:nth-child(even) {
+  background: lightgreen;
+}
+body footer {
   margin: 30px 0 30px;
   padding: 30px 0 25px;
   font-size: 3rem;
